@@ -1,12 +1,6 @@
 import React from "react";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
-import banner from "./assets/banner.png";
-import banner2 from "./assets/banner2.png";
-import nft2 from "./assets/2.webp";
 import tesmo from "./assets/tesmo.gif";
-import rkz from "./assets/rkz.png";
-import solar from "./assets/solar.png";
-import capture1 from "./assets/capture1.png";
 import { Tweet } from "react-twitter-widgets";
 import Member from "./Member";
 import Header from "./Header";
@@ -153,21 +147,10 @@ const Fullpage = () => {
           onClick={() => ref.current.scrollTo(3)}
           id="3"
         >
-          <Parallax pages={1.5} horizontal>
-            <ParallaxLayer
-              id="1"
-              speed={0.6}
-              offset={0}
-              factor={1.5}
-              className="bg-tesmo"
-              /*   style={{
-            backgroundImage: `url(${banner})`,
-            backgroundSize: "cover",
-          }} */
-            >
+         
               <div className="w-full h-full p-20 text-left  menu">
                 <h1 className="text-[3rem] text-white menu">Team</h1>
-                <div className="flex gap-4 mt-28 w-full">
+                <div className="grid grid-cols-4 gap-4 w-full">
                   <Member
                     photo="https://pbs.twimg.com/profile_images/1622467149942910976/cMeW5lXm_400x400.jpg"
                     name="rkz"
@@ -248,8 +231,7 @@ const Fullpage = () => {
                   />
                 </div>
               </div>
-            </ParallaxLayer>
-          </Parallax>
+          
         </ParallaxLayer>
         <ParallaxLayer
           id="1"
