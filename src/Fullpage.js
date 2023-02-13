@@ -3,7 +3,7 @@ import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 import banner from "./assets/banner.png";
 import banner2 from "./assets/banner2.png";
 import nft2 from "./assets/2.webp";
-import nft3 from "./assets/3.webp";
+import tesmo from "./assets/tesmo.gif";
 import rkz from "./assets/rkz.png";
 import solar from "./assets/solar.png";
 import capture1 from "./assets/capture1.png";
@@ -14,20 +14,20 @@ import Header from "./Header";
 const Fullpage = () => {
   const ref = React.useRef();
   const parallax = React.useRef();
-/*   const [number, setNumber] = React.useState(0); */
-/* 
+  const [number, setNumber] = React.useState("");
+
   React.useEffect(() => {
-ref.current.scrollTo(number);
-  }, []);
- */
+   ref.current.scrollTo(number);
+    
+  }, [number]);
 
   return (
     <div className="text-tesmo bg-tesmo">
-      <Header /* setNumber={() => setNumber()} */ />
-      <Parallax pages={3}>
+      <Header setNumber={setNumber} />
+      <Parallax ref={ref} pages={5}>
         <ParallaxLayer
           id="1"
-          speed={0.6}
+          speed={0}
           offset={0}
           factor={1}
           className="bg-tesmo"
@@ -58,15 +58,19 @@ ref.current.scrollTo(number);
               </div>
             </div>
             <div className=" w-full">
-              <img src={nft3} className="w-3/4 mx-auto  rounded-lg" alt="nft" />
+              <img
+                src={tesmo}
+                className="w-3/4 mx-auto  rounded-lg"
+                alt="nft"
+              />
             </div>
           </div>
         </ParallaxLayer>
         <ParallaxLayer
           id="2"
-          speed={0.9}
-          offset={0.9}
-          factor={3}
+          speed={0.8}
+          offset={1}
+          factor={2}
           className="bg-tesmo"
         >
           <div className="w-full h-full bg-tesmo p-20 text-[3rem] menu">
@@ -143,56 +147,119 @@ ref.current.scrollTo(number);
         </ParallaxLayer>
         <ParallaxLayer
           speed={0.5}
-          offset={2}
+          offset={3}
           factor={1}
           className="bg-tesmo"
           onClick={() => ref.current.scrollTo(3)}
           id="3"
         >
-          <div className="w-full h-full p-20 text-left text-[3rem] menu">
-            <h1 className="text-white">Team</h1>
-            <div className="gap-4 grid grid-cols-5 items-center h-full ">
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1622467149942910976/cMeW5lXm_400x400.jpg"
-                name="rkz"
-                user="@RGFREESTYLE"
-                discord="rkz#4276"
-                details="Fullstack React Developer."
-                curiosity="I like cats & I am here since Dec, 2021."
-              />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1622467149942910976/cMeW5lXm_400x400.jpg"
-                name="rkz"
-                user="@RGFREESTYLE"
-                discord="rkz#4276"
-                details="Fullstack React Developer."
-                curiosity="I like cats & I am here since Dec, 2021."
-              />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1622467149942910976/cMeW5lXm_400x400.jpg"
-                name="rkz"
-                user="@RGFREESTYLE"
-                discord="rkz#4276"
-                details="Fullstack React Developer."
-                curiosity="I like cats & I am here since Dec, 2021."
-              />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1622467149942910976/cMeW5lXm_400x400.jpg"
-                name="rkz"
-                user="@RGFREESTYLE"
-                discord="rkz#4276"
-                details="Fullstack React Developer."
-                curiosity="I like cats & I am here since Dec, 2021."
-              />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1622467149942910976/cMeW5lXm_400x400.jpg"
-                name="rkz"
-                user="@RGFREESTYLE"
-                discord="rkz#4276"
-                details="Fullstack React Developer."
-                curiosity="I like cats & I am here since Dec, 2021."
-              />
-            </div>
+          <Parallax pages={1.5} horizontal>
+            <ParallaxLayer
+              id="1"
+              speed={0.6}
+              offset={0}
+              factor={1.5}
+              className="bg-tesmo"
+              /*   style={{
+            backgroundImage: `url(${banner})`,
+            backgroundSize: "cover",
+          }} */
+            >
+              <div className="w-full h-full p-20 text-left  menu">
+                <h1 className="text-[3rem] text-white menu">Team</h1>
+                <div className="flex gap-4 mt-28 w-full">
+                  <Member
+                    photo="https://pbs.twimg.com/profile_images/1622467149942910976/cMeW5lXm_400x400.jpg"
+                    name="rkz"
+                    user="@RGFREESTYLE"
+                    discord="rkz#4276"
+                    details="Fullstack React Developer."
+                    role="CORE TEAM"
+
+                    /*                 curiosity="I like cats & I am here since Dec, 2021."
+                     */
+                  />
+                  <Member
+                    photo="https://pbs.twimg.com/profile_images/1622283245055352833/HoiXbPP5_400x400.jpg"
+                    name="Robotventures.sol"
+                    user="@R0botventures"
+                    discord="RobotVentures.sol#3030"
+                    details="Canadian - Business Analyst - Tech Nerd"
+                    role="CORE TEAM"
+
+                    /*                 curiosity="I love cats & I am here since Dec, 2021."
+                     */
+                  />
+                  <Member
+                    photo="https://pbs.twimg.com/profile_images/1622554354661072899/psDUFrXA_400x400.jpg"
+                    name="Ryan"
+                    user="@Ryan_Mirror"
+                    discord="rkz#4276"
+                    details="MirrorWorld | Community Manager"
+                    role="CORE TEAM"
+
+                    /*                 curiosity="I like cats & I am here since Dec, 2021."
+                     */
+                  />
+                  <Member
+                    photo="https://pbs.twimg.com/profile_images/1570404982146351104/snVQhnBi_400x400.jpg"
+                    name="Kingpaperhands"
+                    user="@kingpaperhands"
+                    discord="rkz#4276"
+                    details="Rug radar."
+                    curiosity="I like cats & I am here since Dec, 2021."
+                    role="CORE TEAM"
+                  />
+                  <Member
+                    photo="https://pbs.twimg.com/profile_images/1624568312775467009/u_rdIkmW_400x400.jpg"
+                    name="Dylan"
+                    user="@nfa_caller"
+                    discord="rkz#4276"
+                    details="Lorem lorem lorem"
+                    curiosity="I like cats & I am here since Dec, 2021."
+                    role="CORE TEAM"
+                  />
+                  <Member
+                    photo="https://pbs.twimg.com/profile_images/1624568312775467009/u_rdIkmW_400x400.jpg"
+                    name="Gaajo"
+                    user="@nfa_caller"
+                    discord="rkz#4276"
+                    details="Lorem lorem lorem"
+                    curiosity="I like cats & I am here since Dec, 2021."
+                    role="CORE TEAM"
+                  />
+                  <Member
+                    photo="https://pbs.twimg.com/profile_images/1618243803185299461/SihrNd0w_400x400.jpg"
+                    name="Solar Dex"
+                    user="@solar_dex"
+                    discord="rkz#4276"
+                    details="Co-Founder and CEO of Solar Dex."
+                    curiosity="I like cats & I am here since Dec, 2021."
+                    role="ADVISOR"
+                  />
+                  <Member
+                    photo="https://pbs.twimg.com/profile_images/1582951550028242946/bjWDnLc7_400x400.jpg"
+                    name="Dak Daze"
+                    user="@dak_daze"
+                    discord="rkz#4276"
+                    details="Lead With an Open Mind and an Open Heart"
+                    curiosity="I like cats & I am here since Dec, 2021."
+                    role="ADVISOR"
+                  />
+                </div>
+              </div>
+            </ParallaxLayer>
+          </Parallax>
+        </ParallaxLayer>
+        <ParallaxLayer
+          id="1"
+          speed={0.6}
+          offset={4}
+          factor={1}
+          className="bg-tesmo"
+        >
+          <div className="w-full h-full p-20 flex items-center justify-center  menu">
+            <h1 className="text-[3rem] text-white menu">Cooming Soon</h1>
           </div>
         </ParallaxLayer>
       </Parallax>

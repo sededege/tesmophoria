@@ -6,9 +6,6 @@ import me from "./assets/me.png";
 
 const Header = ( { setNumber } ) => {
   const [menu, setMenu] = React.useState("Vision");
-
-  
-
   const [scroll, setY] = React.useState(window.scrollY);
 
   const handleNavigation = React.useCallback(
@@ -18,6 +15,22 @@ const Header = ( { setNumber } ) => {
     },
     [scroll]
   );
+  
+
+
+  React.useEffect(() => {
+    setY(window.scrollY);
+    console.log(window.scrollY)
+
+    window.addEventListener("scroll", handleNavigation);
+
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+    };
+  }, [handleNavigation]);
+
+
+
 
   const menunav = [
     {
@@ -37,17 +50,20 @@ const Header = ( { setNumber } ) => {
       name: "Roadmap",
     },
   ];
-  React.useEffect(() => {
-    setY(window.scrollY);
-    window.addEventListener("scroll", handleNavigation);
 
-    return () => {
-      window.removeEventListener("scroll", handleNavigation);
-    };
-  }, [handleNavigation]);
 
-  const scrollTo = () => {};
+const scroller = (props) => {
+  if (props[1] === 2){
+    setNumber(3)
 
+  } else if (props[1] === 3){
+    setNumber(4)
+  }
+  else {
+    setNumber(props[1])
+  }
+  setMenu(props[0])
+}
   return (
     <nav
       className={`${
@@ -80,10 +96,8 @@ const Header = ( { setNumber } ) => {
       <div className="flex gap-4 mr-6">
         <ul className="menu flex gap-4 text-right text-pike2 cursor-pointer text-[1.3rem]">
           {menunav.map((a,index) => (
-            <li
-              onClick={() => setNumber(index)}
-              /* onClick={() => setMenu(a.name)} */
-              
+            <li key={index}
+              onClick={() => scroller([a.name, index])}  
               className={`${
                 menu === a.name ? "text-yellow-400" : "text-white"
               } `}
