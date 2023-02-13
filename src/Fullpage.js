@@ -11,8 +11,7 @@ const Fullpage = () => {
   const [number, setNumber] = React.useState("");
 
   React.useEffect(() => {
-   ref.current.scrollTo(number);
-    
+    ref.current.scrollTo(number);
   }, [number]);
 
   return (
@@ -32,23 +31,21 @@ const Fullpage = () => {
         >
           <div className="w-full h-full  bg-tesmo mt-20 p-20 text-center text-[3rem] flex justify-between menu">
             <div className=" w-full items-center ">
-              <div className="flex  flex-col items-center mt-10 font-mono">
-                <h1 className=" text-white menu">Vision</h1>
-                <p className="text-white text-[1.4rem]">
-                  Duis do ad elit mollit proident. Adipisicing ea dolor magna ad
-                  laborum nisi. Amet fugiat exercitation elit esse cupidatat
-                  incididunt velit.
-                </p>
-                <p className="text-white text-[1.4rem]">
-                  Duis do ad elit mollit proident. Adipisicing ea dolor magna ad
-                  laborum nisi. Amet fugiat exercitation elit esse cupidatat
-                  incididunt velit.
-                </p>
-                <p className="text-white text-[1.4rem]">
-                  Duis do ad elit mollit proident. Adipisicing ea dolor magna ad
-                  laborum nisi. Amet fugiat exercitation elit esse cupidatat
-                  incididunt velit.
-                </p>
+              <div className="flex  flex-col items-center mt-10 font text-white text-[1.4rem] justify-between h-[50vh]">
+                <h1 className=" text-white menu text-[3rem]">Vision</h1>
+                <p className=" mt-10">
+                  We are tired of Solana being such a toxic and scam ecosystem.
+                 From now on we will start
+                  building a project that will change the game of Solana.</p>
+                  <p className=" mt-10 text-[1.2rem]">
+                  Thanks 4 all to the heroes who saved  <span className="font-bold">+250,000 usd </span> from the community.
+                  </p> 
+                  <p className=" mt-10">
+                  Thanks for trusting us,<br></br>
+                 <span className="font-bold">Thesmophoria team.</span>
+                  </p> 
+               
+                
               </div>
             </div>
             <div className=" w-full">
@@ -147,91 +144,100 @@ const Fullpage = () => {
           onClick={() => ref.current.scrollTo(3)}
           id="3"
         >
-         
-              <div className="w-full h-full p-20 text-left  menu">
-                <h1 className="text-[3rem] text-white menu">Team</h1>
-                <div className="grid grid-cols-4 gap-4 w-full">
-                  <Member
-                    photo="https://pbs.twimg.com/profile_images/1622467149942910976/cMeW5lXm_400x400.jpg"
-                    name="rkz"
-                    user="@RGFREESTYLE"
-                    discord="rkz#4276"
-                    details="Fullstack React Developer."
-                    role="CORE TEAM"
+          <div className="w-full h-full p-20 text-left  menu">
+            <h1 className="text-[3rem] text-white menu">Team</h1>
+            <div className="grid grid-cols-4 gap-4 w-full">
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1611101650818682889/HKEw896L_400x400.png"
+                name="ApocalypsevSol"
+                user="@RGFREESTYLE"
+                discord="rkz#4276"
+                details="DevOps Engineer"
+                role="DEV LEADER"
 
-                    /*                 curiosity="I like cats & I am here since Dec, 2021."
-                     */
-                  />
-                  <Member
-                    photo="https://pbs.twimg.com/profile_images/1622283245055352833/HoiXbPP5_400x400.jpg"
-                    name="Robotventures.sol"
-                    user="@R0botventures"
-                    discord="RobotVentures.sol#3030"
-                    details="Canadian - Business Analyst - Tech Nerd"
-                    role="CORE TEAM"
+                /*                 curiosity="I like cats & I am here since Dec, 2021."
+                 */
+              />
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1622467149942910976/cMeW5lXm_400x400.jpg"
+                name="rkz"
+                user="@RGFREESTYLE"
+                discord="rkz#4276"
+                details="Fullstack React Developer"
+                role="DERUG LEADER"
 
-                    /*                 curiosity="I love cats & I am here since Dec, 2021."
-                     */
-                  />
-                  <Member
-                    photo="https://pbs.twimg.com/profile_images/1622554354661072899/psDUFrXA_400x400.jpg"
-                    name="Ryan"
-                    user="@Ryan_Mirror"
-                    discord="rkz#4276"
-                    details="MirrorWorld | Community Manager"
-                    role="CORE TEAM"
+                /*                 curiosity="I like cats & I am here since Dec, 2021."
+                 */
+              />
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1622283245055352833/HoiXbPP5_400x400.jpg"
+                name="Robotventures.sol"
+                user="@R0botventures"
+                discord="RobotVentures.sol#3030"
+                details="Canadian - Business Analyst - Tech Nerd"
+                role="DERUG LEADER"
 
-                    /*                 curiosity="I like cats & I am here since Dec, 2021."
-                     */
-                  />
-                  <Member
-                    photo="https://pbs.twimg.com/profile_images/1570404982146351104/snVQhnBi_400x400.jpg"
-                    name="Kingpaperhands"
-                    user="@kingpaperhands"
-                    discord="rkz#4276"
-                    details="Rug radar."
-                    curiosity="I like cats & I am here since Dec, 2021."
-                    role="CORE TEAM"
-                  />
-                  <Member
-                    photo="https://pbs.twimg.com/profile_images/1624568312775467009/u_rdIkmW_400x400.jpg"
-                    name="Dylan"
-                    user="@nfa_caller"
-                    discord="rkz#4276"
-                    details="Lorem lorem lorem"
-                    curiosity="I like cats & I am here since Dec, 2021."
-                    role="CORE TEAM"
-                  />
-                  <Member
-                    photo="https://pbs.twimg.com/profile_images/1624568312775467009/u_rdIkmW_400x400.jpg"
-                    name="Gaajo"
-                    user="@nfa_caller"
-                    discord="rkz#4276"
-                    details="Lorem lorem lorem"
-                    curiosity="I like cats & I am here since Dec, 2021."
-                    role="CORE TEAM"
-                  />
-                  <Member
-                    photo="https://pbs.twimg.com/profile_images/1618243803185299461/SihrNd0w_400x400.jpg"
-                    name="Solar Dex"
-                    user="@solar_dex"
-                    discord="rkz#4276"
-                    details="Co-Founder and CEO of Solar Dex."
-                    curiosity="I like cats & I am here since Dec, 2021."
-                    role="ADVISOR"
-                  />
-                  <Member
-                    photo="https://pbs.twimg.com/profile_images/1582951550028242946/bjWDnLc7_400x400.jpg"
-                    name="Dak Daze"
-                    user="@dak_daze"
-                    discord="rkz#4276"
-                    details="Lead With an Open Mind and an Open Heart"
-                    curiosity="I like cats & I am here since Dec, 2021."
-                    role="ADVISOR"
-                  />
-                </div>
-              </div>
-          
+                /*                 curiosity="I love cats & I am here since Dec, 2021."
+                 */
+              />
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1622554354661072899/psDUFrXA_400x400.jpg"
+                name="Ryan"
+                user="@Ryan_Mirror"
+                discord="rkz#4276"
+                details="MirrorWorld | Community Manager"
+                role="COLLAB MANAGER"
+
+                /*                 curiosity="I like cats & I am here since Dec, 2021."
+                 */
+              />
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1570404982146351104/snVQhnBi_400x400.jpg"
+                name="Kingpaperhands"
+                user="@kingpaperhands"
+                discord="rkz#4276"
+                details="Rug radar"
+                curiosity="I like cats & I am here since Dec, 2021."
+                role="RUG ANALYST"
+              />
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1624568312775467009/u_rdIkmW_400x400.jpg"
+                name="Dylan"
+                user="@nfa_caller"
+                discord="rkz#4276"
+                details="Solana enthusiast"
+                curiosity="I like cats & I am here since Dec, 2021."
+                role="COMMUNITY LEADER"
+              />
+              <Member
+                photo="https://media.discordapp.net/attachments/1072978757448638555/1074778963861315725/newlogosmall.png"
+                name="Gajoo"
+                user="@Gajoo_sol"
+                discord="rkz#4276"
+                details="Solana enthusiast"
+                curiosity="I like cats & I am here since Dec, 2021."
+                role="SUPPORT LEADER"
+              />
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1618243803185299461/SihrNd0w_400x400.jpg"
+                name="Solar Dex"
+                user="@solar_dex"
+                discord="rkz#4276"
+                details="Co-Founder and CEO of Solar Dex"
+                curiosity="I like cats & I am here since Dec, 2021."
+                role="ADVISOR"
+              />
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1582951550028242946/bjWDnLc7_400x400.jpg"
+                name="Dak Daze"
+                user="@dak_daze"
+                discord="rkz#4276"
+                details="Lead With an Open Mind and an Open Heart"
+                curiosity="I like cats & I am here since Dec, 2021."
+                role="ADVISOR"
+              />
+            </div>
+          </div>
         </ParallaxLayer>
         <ParallaxLayer
           id="1"
