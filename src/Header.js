@@ -6,7 +6,7 @@ import me from "./assets/me.png";
 import { useNavigate } from "react-router-dom";
 
 const Header = ({ setNumber }) => {
-  const [menu, setMenu] = React.useState("Raffle");
+  const [menu, setMenu] = React.useState("Vision");
   const [scroll, setY] = React.useState(window.scrollY);
   const navigate = useNavigate();
   const handleNavigation = React.useCallback(
@@ -68,14 +68,10 @@ const Header = ({ setNumber }) => {
       navigate("/", { state: 5 });
     }
 
-    /* else if (props[1] === 3){
-    setNumber(4)
-  }
-  else {
-    setNumber(props[1])
-  }   */
+  
     setMenu(props[0]);
   };
+
   return (
     <nav
       className={`${
