@@ -1,15 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './Header';
-import Fullpage from './Fullpage';
-import Footer from './Footer';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Header";
+import Fullpage from "./Fullpage";
+import Footer from "./Footer";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import Raffle from "./Raffle";
+import Headercel from "./Headercel";
 
 function App() {
   return (
-    <div className="w-full text-white bg-red-700">
-      <Fullpage />
+    <Router>
+      <Header/>
+      <Headercel/>
+      <Routes>
+        <Route exact path="/" element={<Fullpage />}></Route>
+        <Route path="/raffle" element={<Raffle/>} ></Route>
+      </Routes>
       <Footer/>
-    </div>
+    </Router>
   );
 }
 

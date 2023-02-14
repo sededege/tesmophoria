@@ -5,24 +5,22 @@ import { Tweet } from "react-twitter-widgets";
 import Member from "./Member";
 import Header from "./Header";
 import Headercel from "./Headercel";
+import { useLocation } from "react-router-dom";
 
 const Fullpage = () => {
   const ref = React.useRef();
   const parallax = React.useRef();
   const [number, setNumber] = React.useState("");
+  const state = useLocation()
+
   const [pantalla, setPantalla] = React.useState("");
   React.useEffect(() => {
-    ref.current.scrollTo(number);
+    ref.current.scrollTo(state.state-1);
     setPantalla(window.screen.width);
-    console.log(pantalla);
-  }, [number, pantalla]);
-
+  }, [number, pantalla,state]);
+  
   return (
     <div className="text-tesmo bg-tesmo">
-      <Header setNumber={setNumber} className="hidden" />
-
-      <Headercel setNumber={setNumber} />
-
       <Parallax ref={ref} pages={pantalla > 500 ? 5 : 7}>
         <ParallaxLayer
           id="1"
@@ -198,7 +196,7 @@ const Fullpage = () => {
                 user="@Ryan_Mirror"
                 discord="rkz#4276"
                 details="Community Manager"
-                role="COLLAB DIRECTOR"
+                role="COMMUNITY DIRECTOR"
 
                 /*                 curiosity="I like cats & I am here since Dec, 2021."
                  */
@@ -217,7 +215,7 @@ const Fullpage = () => {
                 name="Dylan"
                 user="@nfa_caller"
                 discord="rkz#4276"
-                details="Solana enthusiast"
+                details="Solana Enthusiast"
                 curiosity="I like cats & I am here since Dec, 2021."
                 role="COMMUNITY LEADER"
               />
@@ -226,7 +224,7 @@ const Fullpage = () => {
                 name="Gajoo"
                 user="@Gajoo_sol"
                 discord="rkz#4276"
-                details="Solana enthusiast"
+                details="Solana Enthusiast"
                 curiosity="I like cats & I am here since Dec, 2021."
                 role="SUPPORT LEADER"
               />

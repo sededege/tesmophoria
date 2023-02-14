@@ -7,11 +7,13 @@ import {
 import { FaDiscord } from "react-icons/fa";
 import logo from "./assets/logo.jpg";
 import me from "./assets/me.png";
+import { useNavigate } from "react-router-dom";
 
 const Headercel = ({ setNumber }) => {
   const [menu, setMenu] = React.useState("Vision");
   const [scroll, setY] = React.useState(window.scrollY);
   const [open, setOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const handleNavigation = React.useCallback(
     (e) => {
@@ -49,8 +51,11 @@ const Headercel = ({ setNumber }) => {
       id: 2,
       name: "Roadmap",
     },
+    {
+      id: 5,
+      name: "Raffle",
+    },
   ];
-
   const Navegador = () => {
     return (
       <div className="h-[100vh] fixed top-0 z-[100] w-full bg-tesmo items-center flex  justify-center">
@@ -87,16 +92,27 @@ const Headercel = ({ setNumber }) => {
   };
 
   const scroller = (props) => {
-    if (props[1] === 2) {
-      setNumber(3);
-    } else if (props[1] === 3) {
-      setNumber(6);
-    } else {
-      setNumber(props[1]);
+    if (props[0] === "Vision") {
+      navigate("/", { state: 1 });
     }
+    if (props[0] === "Raffle") {
+      navigate("/raffle", { state: 0 });
+    }
+    if (props[0] === "Our History") {
+      navigate("/", { state: 2 });
+    }
+    if (props[0] === "Team") {
+      navigate("/", { state: 4 });
+    }
+    if (props[0] === "Roadmap") {
+      navigate("/", { state: 5 });
+    }
+
+  
     setMenu(props[0]);
     setOpen(false)
   };
+
   return (
     <div>
       {open && <Navegador />}

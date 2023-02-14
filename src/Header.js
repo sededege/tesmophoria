@@ -3,11 +3,12 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa";
 import logo from "./assets/logo.jpg";
 import me from "./assets/me.png";
+import { useNavigate } from "react-router-dom";
 
-const Header = ( { setNumber } ) => {
-  const [menu, setMenu] = React.useState("Vision");
+const Header = ({ setNumber }) => {
+  const [menu, setMenu] = React.useState("Raffle");
   const [scroll, setY] = React.useState(window.scrollY);
-
+  const navigate = useNavigate();
   const handleNavigation = React.useCallback(
     (e) => {
       const window = e.currentTarget;
@@ -15,12 +16,10 @@ const Header = ( { setNumber } ) => {
     },
     [scroll]
   );
-  
-
 
   React.useEffect(() => {
     setY(window.scrollY);
-    console.log(window.scrollY)
+    console.log(window.scrollY);
 
     window.addEventListener("scroll", handleNavigation);
 
@@ -28,9 +27,6 @@ const Header = ( { setNumber } ) => {
       window.removeEventListener("scroll", handleNavigation);
     };
   }, [handleNavigation]);
-
-
-
 
   const menunav = [
     {
@@ -49,21 +45,37 @@ const Header = ( { setNumber } ) => {
       id: 2,
       name: "Roadmap",
     },
+    {
+      id: 5,
+      name: "Raffle",
+    },
   ];
 
+  const scroller = (props) => {
+    if (props[0] === "Vision") {
+      navigate("/", { state: 1 });
+    }
+    if (props[0] === "Raffle") {
+      navigate("/raffle", { state: 0 });
+    }
+    if (props[0] === "Our History") {
+      navigate("/", { state: 2 });
+    }
+    if (props[0] === "Team") {
+      navigate("/", { state: 4 });
+    }
+    if (props[0] === "Roadmap") {
+      navigate("/", { state: 5 });
+    }
 
-const scroller = (props) => {
-  if (props[1] === 2){
-    setNumber(3)
-
-  } else if (props[1] === 3){
+    /* else if (props[1] === 3){
     setNumber(4)
   }
   else {
     setNumber(props[1])
-  }
-  setMenu(props[0])
-}
+  }   */
+    setMenu(props[0]);
+  };
   return (
     <nav
       className={`${
@@ -95,19 +107,18 @@ const scroller = (props) => {
       />
       <div className="flex gap-4 mr-6">
         <ul className="menu flex gap-4 text-right text-pike2 cursor-pointer text-[1.3rem]">
-          {menunav.map((a,index) => (
-            <li key={index}
-              onClick={() => scroller([a.name, index])}  
+          {menunav.map((a, index) => (
+            <li
+              key={index}
+              onClick={() => scroller([a.name, index])}
               className={`${
                 menu === a.name ? "text-yellow-400" : "text-white"
               } `}
             >
               {a.name}
-       
             </li>
           ))}
         </ul>
-       
       </div>
     </nav>
   );
