@@ -45,7 +45,7 @@ const Fullpage = () => {
                   the game of Solana.
                 </p>
                 <p className=" mt-4  text-[1.2rem] md:text-[1.2rem]">
-                  Thanks 4 all to the heroes who saved{" "}
+                  Thanks to all to the heroes who saved{" "}
                   <span className="font-bold">+250,000 usd </span> from the
                   community.
                 </p>
