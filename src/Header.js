@@ -68,7 +68,7 @@ const scroller = (props) => {
     <nav
       className={`${
         scroll > 10 ? "top-0  border-b-4 border-pike fixed " : "top-0 absolute "
-      } : w-full flex z-[100] justify-between bg-tesmo items-center px-20 h-20 transition-all ease-in 2s`}
+      } : w-full hidden md:flex z-[100] justify-between bg-tesmo items-center px-20 h-20 transition-all ease-in 2s`}
     >
       {/*       <img src={logo} alt="logo" className="flex w-20" />
        */}{" "}
@@ -107,11 +107,7 @@ const scroller = (props) => {
             </li>
           ))}
         </ul>
-        {/*  <div
-          className="flex gap-2 items-center relative "
-        >         
-          <AiOutlineShoppingCart className="flex z-100 cursor-pointer text-[1.8rem] text-red-500" />
-        </div> */}
+       
       </div>
     </nav>
   );

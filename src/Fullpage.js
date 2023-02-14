@@ -4,20 +4,26 @@ import tesmo from "./assets/tesmo.gif";
 import { Tweet } from "react-twitter-widgets";
 import Member from "./Member";
 import Header from "./Header";
+import Headercel from "./Headercel";
 
 const Fullpage = () => {
   const ref = React.useRef();
   const parallax = React.useRef();
   const [number, setNumber] = React.useState("");
-
+  const [pantalla, setPantalla] = React.useState("");
   React.useEffect(() => {
     ref.current.scrollTo(number);
-  }, [number]);
+    setPantalla(window.screen.width);
+    console.log(pantalla);
+  }, [number, pantalla]);
 
   return (
     <div className="text-tesmo bg-tesmo">
-      <Header setNumber={setNumber} />
-      <Parallax ref={ref} pages={5}>
+      <Header setNumber={setNumber} className="hidden" />
+
+      <Headercel setNumber={setNumber} />
+
+      <Parallax ref={ref} pages={pantalla > 500 ? 5 : 7}>
         <ParallaxLayer
           id="1"
           speed={0}
@@ -29,29 +35,32 @@ const Fullpage = () => {
             backgroundSize: "cover",
           }} */
         >
-          <div className="w-full h-full  bg-tesmo mt-20 p-20 text-center text-[3rem] flex justify-between menu">
-            <div className=" w-full items-center ">
-              <div className="flex  flex-col items-center mt-10 font text-white text-[1.4rem] justify-between h-[50vh]">
-                <h1 className=" text-white menu text-[3rem]">Vision</h1>
-                <p className=" mt-10">
+          <div className="w-full h-full  bg-tesmo mt-20 px-4 md:p-20 text-center text-[3rem] flex flex-col md:flex-row justify-between menu">
+            <div className=" w-full items-center  ">
+              <div className="flex  flex-col items-center mt-10 font text-white text-[1.4rem] justify-between h-full md:h-[50vh]">
+                <h1 className=" text-white menu md:text-[3rem] text-[2rem]  ">
+                  Vision
+                </h1>
+                <p className=" mt-4 text-[1.2rem]">
                   We are tired of Solana being such a toxic and scam ecosystem.
-                 From now on we will start
-                  building a project that will change the game of Solana.</p>
-                  <p className=" mt-10 text-[1.2rem]">
-                  Thanks 4 all to the heroes who saved  <span className="font-bold">+250,000 usd </span> from the community.
-                  </p> 
-                  <p className=" mt-10">
+                  From now on we will start building a project that will change
+                  the game of Solana.
+                </p>
+                <p className=" mt-4  text-[1.2rem] md:text-[1.2rem]">
+                  Thanks 4 all to the heroes who saved{" "}
+                  <span className="font-bold">+250,000 usd </span> from the
+                  community.
+                </p>
+                <p className=" mt-4 text-[1.2rem]">
                   Thanks for trusting us,<br></br>
-                 <span className="font-bold">Thesmophoria team.</span>
-                  </p> 
-               
-                
+                  <span className="font-bold">Thesmophoria team.</span>
+                </p>
               </div>
             </div>
             <div className=" w-full">
               <img
                 src={tesmo}
-                className="w-3/4 mx-auto  rounded-lg"
+                className="w-full p-4 md:w-3/4 md:p-0  mx-auto  rounded-lg"
                 alt="nft"
               />
             </div>
@@ -60,13 +69,15 @@ const Fullpage = () => {
         <ParallaxLayer
           id="2"
           speed={0.8}
-          offset={1}
+          offset={ pantalla > 500 ? 1 : 1.1}
+
           factor={2}
           className="bg-tesmo"
+          /*   sticky={{start:1, end: 2}} */
         >
-          <div className="w-full h-full bg-tesmo p-20 text-[3rem] menu">
+          <div className="w-full h-full bg-tesmo p-10 md:p-20 text-[3rem] menu">
             <h1 className="text-white text-left">Our History</h1>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-4 md:[&>*:nth-child(odd)]:mt-20">
               <div className="w-full">
                 <Tweet
                   tweetId="1624606539620433920"
@@ -138,15 +149,16 @@ const Fullpage = () => {
         </ParallaxLayer>
         <ParallaxLayer
           speed={0.5}
-          offset={3}
-          factor={1}
+          offset={ pantalla > 500 ? 3 : 3.1}
+
+          factor={pantalla > 500 ? 2 : 4}
           className="bg-tesmo"
           onClick={() => ref.current.scrollTo(3)}
           id="3"
         >
-          <div className="w-full h-full p-20 text-left  menu">
+          <div className="w-full h-full p-4 md:p-20 md:text-left  menu">
             <h1 className="text-[3rem] text-white menu">Team</h1>
-            <div className="grid grid-cols-4 gap-4 w-full">
+            <div className="grid md:grid-cols-4 grid-cols-1 gap-4 w-full">
               <Member
                 photo="https://pbs.twimg.com/profile_images/1611101650818682889/HKEw896L_400x400.png"
                 name="ApocalypsevSol"
@@ -241,13 +253,14 @@ const Fullpage = () => {
         </ParallaxLayer>
         <ParallaxLayer
           id="1"
-          speed={0.6}
-          offset={4}
+          speed={0.9}
+          offset={ pantalla > 500 ? 4 : 6 }
+
           factor={1}
           className="bg-tesmo"
         >
           <div className="w-full h-full p-20 flex items-center justify-center  menu">
-            <h1 className="text-[3rem] text-white menu">Cooming Soon</h1>
+            <h1 className="text-[3rem] text-white menu text-center">Cooming Soon</h1>
           </div>
         </ParallaxLayer>
       </Parallax>
