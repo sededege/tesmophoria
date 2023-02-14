@@ -197,8 +197,8 @@ const Fullpage = () => {
                 name="Ryan"
                 user="@Ryan_Mirror"
                 discord="rkz#4276"
-                details="MirrorWorld | Community Manager"
-                role="COLLAB MANAGER"
+                details="Community Manager"
+                role="COLLAB DIRECTOR"
 
                 /*                 curiosity="I like cats & I am here since Dec, 2021."
                  */
