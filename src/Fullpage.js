@@ -226,7 +226,7 @@ const Fullpage = () => {
                 discord="rkz#4276"
                 details="Solana Enthusiast"
                 curiosity="I like cats & I am here since Dec, 2021."
-                role="SUPPORT LEADER"
+                role="DISCORD MANAGER"
               />
               <Member
                 photo="https://pbs.twimg.com/profile_images/1618243803185299461/SihrNd0w_400x400.jpg"
