@@ -8,11 +8,9 @@ const Raffle = () => {
   const [number, setNumber] = React.useState("");
 
   return (
-    <div className="mt-20">
-      {/*  <Header setNumber={setNumber} className="hidden" />
-      <Headercel setNumber={setNumber} /> */}
-{/*       <h1 className=" text-white menu md:text-[3rem] text-[2rem]  ">Raffle</h1>
- */}      <div className="w-full h-full  p-20 flex md:flex-row flex-col">
+    <div className="mt-20 flex justify-center items-center w-full h-[90vh]">
+      <h1 className=" text-white menu md:text-[3rem] flex  ">Cooming soon</h1>
+      {/*     <div className="w-full h-full  p-20 flex md:flex-row flex-col">
         <div className="w-full h-3/4 flex flex-col">
           <img className="w-3/4 object-contain mx-auto" src={nft} alt="nft" />
           <p className="text-white text-center mt-4">Goddes #1234</p>
@@ -21,10 +19,7 @@ const Raffle = () => {
           <p>The raffle will be held in</p>
           <Countdown
             date={Date.now() + 80000000}
-            /* intervalDelay={0}
-            precision={3} */
-            /*             renderer={(props) => <div>{props.total}</div>}
-             */
+           
           />
           <div className="mt-20 text-center">
             <p className="text-white font text-[1rem]">
@@ -46,7 +41,7 @@ const Raffle = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
