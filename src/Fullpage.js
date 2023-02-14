@@ -220,7 +220,7 @@ const Fullpage = () => {
                 role="COMMUNITY LEADER"
               />
               <Member
-                photo="https://media.discordapp.net/attachments/1072978757448638555/1074778963861315725/newlogosmall.png"
+                photo="https://media.discordapp.net/attachments/1072978757448638555/1075102613957247028/https___arweave.png"
                 name="Gajoo"
                 user="@Gajoo_sol"
                 discord="rkz#4276"
