@@ -65,7 +65,7 @@ const Header = ({ setNumber }) => {
       navigate("/", { state: 4 });
     }
     if (props[0] === "Roadmap") {
-      navigate("/", { state: 5 });
+      navigate("/", { state: 6 });
     }
 
   

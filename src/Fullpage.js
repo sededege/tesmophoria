@@ -21,7 +21,7 @@ const Fullpage = () => {
   
   return (
     <div className="text-tesmo bg-tesmo">
-      <Parallax ref={ref} pages={pantalla > 500 ? 5 : 7}>
+      <Parallax ref={ref} pages={pantalla > 1024 ? 5 : 8}>
         <ParallaxLayer
           id="1"
           speed={0}
@@ -40,18 +40,16 @@ const Fullpage = () => {
                   Vision
                 </h1>
                 <p className=" mt-4 text-[1.2rem]">
-                  We are tired of Solana being such a toxic and scam ecosystem.
-                  From now on we will start building a project that will change
-                  the game of Solana.
+                The rebirth of the Goddess has happened. From now on we will start building a project that will change the game of Solana.
                 </p>
                 <p className=" mt-4  text-[1.2rem] md:text-[1.2rem]">
                   Thanks to all to the heroes who saved{" "}
-                  <span className="font-bold">+250,000 usd </span> from the
+                  <span className="font-bold">+250,000 USD </span> from the
                   community.
                 </p>
                 <p className=" mt-4 text-[1.2rem]">
                   Thanks for trusting us,<br></br>
-                  <span className="font-bold">Thesmophoria team.</span>
+                  <span className="font-bold">We are Thesmophoria.</span>
                 </p>
               </div>
             </div>
@@ -67,7 +65,7 @@ const Fullpage = () => {
         <ParallaxLayer
           id="2"
           speed={0.8}
-          offset={ pantalla > 500 ? 1 : 1.1}
+          offset={ pantalla > 1024 ? 1 : 1.1}
 
           factor={2}
           className="bg-tesmo"
@@ -75,7 +73,7 @@ const Fullpage = () => {
         >
           <div className="w-full h-full bg-tesmo p-10 md:p-20 text-[3rem] menu">
             <h1 className="text-white text-left">Our History</h1>
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-4 md:[&>*:nth-child(odd)]:mt-20">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 md:[&>*:nth-child(odd)]:mt-20">
               <div className="w-full">
                 <Tweet
                   tweetId="1624606539620433920"
@@ -147,16 +145,16 @@ const Fullpage = () => {
         </ParallaxLayer>
         <ParallaxLayer
           speed={0.5}
-          offset={ pantalla > 500 ? 3 : 3.1}
+          offset={ pantalla > 1024 ? 3 : 3.1}
 
-          factor={pantalla > 500 ? 2 : 4}
+          factor={pantalla > 1024 ? 2 : 4}
           className="bg-tesmo"
           onClick={() => ref.current.scrollTo(3)}
           id="3"
         >
           <div className="w-full h-full p-4 md:p-20 md:text-left  menu">
             <h1 className="text-[3rem] text-white menu">Team</h1>
-            <div className="grid md:grid-cols-4 grid-cols-1 gap-4 w-full">
+            <div className="grid lg:grid-cols-3 xl:grid-cols-5 grid-cols-1 gap-4 w-full">
               <Member
                 photo="https://pbs.twimg.com/profile_images/1611101650818682889/HKEw896L_400x400.png"
                 name="ApocalypsevSol"
@@ -164,6 +162,17 @@ const Fullpage = () => {
                 discord="rkz#4276"
                 details="DevOps Engineer"
                 role="DEV LEADER"
+
+                /*                 curiosity="I like cats & I am here since Dec, 2021."
+                 */
+              />
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1603352592205189120/hnDr5lUH_400x400.jpg"
+                name="Crypto Flan"
+                user="@crypto_flan"
+                discord="rkz#4276"
+                details="Web and App Security Analyst, Dev, Derugging."
+                role="TECH LEADER"
 
                 /*                 curiosity="I like cats & I am here since Dec, 2021."
                  */
@@ -251,8 +260,8 @@ const Fullpage = () => {
         </ParallaxLayer>
         <ParallaxLayer
           id="1"
-          speed={0.9}
-          offset={ pantalla > 500 ? 4 : 6 }
+          speed={1}
+          offset={ pantalla > 1024 ? 5 : 7 }
 
           factor={1}
           className="bg-tesmo"
