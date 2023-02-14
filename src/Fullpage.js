@@ -66,8 +66,9 @@ const Fullpage = () => {
           id="2"
           speed={0.8}
           offset={ pantalla > 1024 ? 1 : 1.1}
+          factor={ pantalla > 1024 ? 2 : 4}
 
-          factor={2}
+     
           className="bg-tesmo"
           /*   sticky={{start:1, end: 2}} */
         >
@@ -267,7 +268,7 @@ const Fullpage = () => {
           className="bg-tesmo"
         >
           <div className="w-full h-full p-20 flex items-center justify-center  menu">
-            <h1 className="text-[3rem] text-white menu text-center">Cooming Soon</h1>
+            <h1 className="text-[3rem] text-white menu text-center">Coming Soon</h1>
           </div>
         </ParallaxLayer>
       </Parallax>

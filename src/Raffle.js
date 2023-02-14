@@ -9,7 +9,7 @@ const Raffle = () => {
 
   return (
     <div className="mt-20 flex justify-center items-center w-full h-[90vh]">
-      <h1 className=" text-white menu text-[3rem] p-20 text-center flex  ">Cooming soon</h1>
+      <h1 className=" text-white menu text-[3rem] p-20 text-center flex  ">Coming soon</h1>
       {/*     <div className="w-full h-full  p-20 flex md:flex-row flex-col">
         <div className="w-full h-3/4 flex flex-col">
           <img className="w-3/4 object-contain mx-auto" src={nft} alt="nft" />
