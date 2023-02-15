@@ -194,7 +194,7 @@ const Fullpage = () => {
                 name="Robotventures.sol"
                 user="@R0botventures"
                 discord="RobotVentures.sol#3030"
-                details="Canadian - Business Analyst - Tech Nerd"
+                details="Business Analyst - Tech Nerd"
                 role="DERUG LEADER"
 
                 /*                 curiosity="I love cats & I am here since Dec, 2021."
