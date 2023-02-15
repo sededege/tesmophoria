@@ -25,7 +25,6 @@ const Headercel = ({ setNumber }) => {
 
   React.useEffect(() => {
     setY(window.scrollY);
-    console.log(window.scrollY);
 
     window.addEventListener("scroll", handleNavigation);
 
@@ -102,7 +101,7 @@ const Headercel = ({ setNumber }) => {
       navigate("/", { state: 2 });
     }
     if (props[0] === "Team") {
-      navigate("/", { state: 6.95 });
+      navigate("/", { state: 5.95 });
     }
     if (props[0] === "Roadmap") {
       navigate("/", { state: 10 });

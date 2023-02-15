@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import Raffle from "./Raffle";
 import Headercel from "./Headercel";
+import Roadmap from "./Roadmap";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Fullpage />}></Route>
         <Route path="/raffle" element={<Raffle/>} ></Route>
+        <Route path="/roadmap" element={<Roadmap/>} ></Route>
       </Routes>
       <Footer/>
     </Router>

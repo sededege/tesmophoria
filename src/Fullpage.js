@@ -21,21 +21,21 @@ const Fullpage = () => {
   
   return (
     <div className="text-tesmo bg-tesmo">
-      <Parallax ref={ref} pages={pantalla > 1024 ? 5 : 10}>
+      <Parallax ref={ref} pages={pantalla > 1024 ? 4 : 10.2}>
         <ParallaxLayer
           id="1"
           speed={0}
           offset={0}
-          factor={1}
+          factor={pantalla > 1024 ? 1 : 1}
           className="bg-tesmo"
           /*   style={{
             backgroundImage: `url(${banner})`,
             backgroundSize: "cover",
           }} */
         >
-          <div className="w-full h-full  bg-tesmo mt-20 px-4 md:p-20 text-center text-[3rem] flex flex-col md:flex-row justify-between menu">
+          <div className="w-full h-full  bg-tesmo  px-4 md:p-20 text-center text-[3rem] flex flex-col md:flex-row justify-between menu">
             <div className=" w-full items-center  ">
-              <div className="flex  flex-col items-center mt-10 font text-white text-[1.4rem] justify-between h-full md:h-[50vh]">
+              <div className="flex  flex-col items-center mt-20 font text-white text-[1.4rem] justify-between h-full md:h-[50vh]">
                 <h1 className=" text-white menu md:text-[3rem] text-[2rem]  ">
                   Vision
                 </h1>
@@ -64,11 +64,9 @@ const Fullpage = () => {
         </ParallaxLayer>
         <ParallaxLayer
           id="2"
-          speed={0.3}
-          offset={ pantalla > 1024 ? 0.9 : 1.1}
+          speed={0.5}
+          offset={ pantalla > 1024 ? 1 : 1.5}
           factor={ pantalla > 1024 ? 2 : 4}
-
-     
           className="bg-tesmo"
           /*   sticky={{start:1, end: 2}} */
         >
@@ -146,15 +144,16 @@ const Fullpage = () => {
         </ParallaxLayer>
         <ParallaxLayer
           speed={0.5}
-          offset={ pantalla > 1024 ? 3 : 6}
+          offset={ pantalla > 1024 ? 3.2 : 6}
 
-          factor={pantalla > 1024 ? 2 : 4}
+          factor={pantalla > 1024 ? 0.5 : 8}
           className="bg-tesmo"
           onClick={() => ref.current.scrollTo(3)}
           id="3"
+          
         >
-          <div className="w-full h-full p-4 md:p-20 md:text-left  menu">
-            <h1 className="text-[3rem] text-white menu">Team</h1>
+          <div className="w-full bg-tesmo h-[1000vh] p-4 md:p-20 md:text-center  menu">
+            <h1 className="text-[3rem] text-white menu text-center md:text-left">Team</h1>
             <div className="grid lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-4 w-full">
               <Member
                 photo="https://pbs.twimg.com/profile_images/1611101650818682889/HKEw896L_400x400.png"
@@ -257,18 +256,6 @@ const Fullpage = () => {
                 role="ADVISOR"
               />
             </div>
-          </div>
-        </ParallaxLayer>
-        <ParallaxLayer
-          id="1"
-          speed={1}
-          offset={ pantalla > 1024 ? 4 : 9 }
-
-          factor={1}
-          className="bg-tesmo"
-        >
-          <div className="w-full h-full p-20 flex items-center justify-center  menu">
-            <h1 className="text-[3rem] text-white menu text-center">Coming Soon</h1>
           </div>
         </ParallaxLayer>
       </Parallax>

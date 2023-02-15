@@ -19,7 +19,6 @@ const Header = ({ setNumber }) => {
 
   React.useEffect(() => {
     setY(window.scrollY);
-    console.log(window.scrollY);
 
     window.addEventListener("scroll", handleNavigation);
 
@@ -59,13 +58,14 @@ const Header = ({ setNumber }) => {
       navigate("/raffle", { state: 0 });
     }
     if (props[0] === "Our History") {
-      navigate("/", { state: 1.7 });
+      navigate("/", { state: 2 });
     }
     if (props[0] === "Team") {
-      navigate("/", { state: 4 });
+      navigate("/", { state: 4.1 });
     }
     if (props[0] === "Roadmap") {
-      navigate("/", { state: 5 });
+    navigate("/roadmap", { state: 0 });
+
     }
 
   
