@@ -21,7 +21,7 @@ const Fullpage = () => {
   
   return (
     <div className="text-tesmo bg-tesmo">
-      <Parallax ref={ref} pages={pantalla > 1024 ? 5 : 8}>
+      <Parallax ref={ref} pages={pantalla > 1024 ? 5 : 10}>
         <ParallaxLayer
           id="1"
           speed={0}
@@ -56,7 +56,7 @@ const Fullpage = () => {
             <div className=" w-full">
               <img
                 src={tesmo}
-                className="w-full p-4 md:w-3/4 md:p-0  mx-auto  rounded-lg"
+                className=" h-full w-full object-cover object-contain p-4 md:w-3/4 md:p-0  mx-auto  rounded-lg"
                 alt="nft"
               />
             </div>
@@ -64,8 +64,8 @@ const Fullpage = () => {
         </ParallaxLayer>
         <ParallaxLayer
           id="2"
-          speed={0.8}
-          offset={ pantalla > 1024 ? 1 : 1.1}
+          speed={0.3}
+          offset={ pantalla > 1024 ? 0.9 : 1.1}
           factor={ pantalla > 1024 ? 2 : 4}
 
      
@@ -146,7 +146,7 @@ const Fullpage = () => {
         </ParallaxLayer>
         <ParallaxLayer
           speed={0.5}
-          offset={ pantalla > 1024 ? 3 : 3.1}
+          offset={ pantalla > 1024 ? 3 : 6}
 
           factor={pantalla > 1024 ? 2 : 4}
           className="bg-tesmo"
@@ -155,7 +155,7 @@ const Fullpage = () => {
         >
           <div className="w-full h-full p-4 md:p-20 md:text-left  menu">
             <h1 className="text-[3rem] text-white menu">Team</h1>
-            <div className="grid lg:grid-cols-3 xl:grid-cols-5 grid-cols-1 gap-4 w-full">
+            <div className="grid lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-4 w-full">
               <Member
                 photo="https://pbs.twimg.com/profile_images/1611101650818682889/HKEw896L_400x400.png"
                 name="ApocalypsevSol"
@@ -262,7 +262,7 @@ const Fullpage = () => {
         <ParallaxLayer
           id="1"
           speed={1}
-          offset={ pantalla > 1024 ? 5 : 7 }
+          offset={ pantalla > 1024 ? 4 : 9 }
 
           factor={1}
           className="bg-tesmo"

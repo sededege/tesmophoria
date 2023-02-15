@@ -59,13 +59,13 @@ const Header = ({ setNumber }) => {
       navigate("/raffle", { state: 0 });
     }
     if (props[0] === "Our History") {
-      navigate("/", { state: 2 });
+      navigate("/", { state: 1.7 });
     }
     if (props[0] === "Team") {
       navigate("/", { state: 4 });
     }
     if (props[0] === "Roadmap") {
-      navigate("/", { state: 6 });
+      navigate("/", { state: 5 });
     }
 
   
@@ -85,21 +85,11 @@ const Header = ({ setNumber }) => {
       >
         PIKE STORE
       </p> */}
-      <div className=" flex gap-4 items-center cursor-pointer">
-        <a href="https://magiceden.io/marketplace/tesmophoria">
-          <img className="w-8 h-8 object-contain" src={me} alt="me" />
-        </a>
-        <a href="https://twitter.com/thesmophoria_">
-          <AiOutlineTwitter className="text-[30px] text-white  hover:text-sky-500" />
-        </a>
-        <a href="https://discord.com/invite/tesmophoria">
-          <FaDiscord className="text-[30px] text-white hover:text-purple-500" />
-        </a>
-      </div>
+     
       <img
         src={logo}
         alt="logo"
-        className="w-24 mt-20 rounded-full fixed left-[calc(50vw-48px)]"
+        className="w-24 p-2"
       />
       <div className="flex gap-4 mr-6">
         <ul className="menu flex gap-4 text-right text-pike2 cursor-pointer text-[1.3rem]">

@@ -102,10 +102,10 @@ const Headercel = ({ setNumber }) => {
       navigate("/", { state: 2 });
     }
     if (props[0] === "Team") {
-      navigate("/", { state: 4 });
+      navigate("/", { state: 6.95 });
     }
     if (props[0] === "Roadmap") {
-      navigate("/", { state: 8 });
+      navigate("/", { state: 10 });
     }
 
   
