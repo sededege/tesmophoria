@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        tesmo: '#0f121a'
+        tesmo: '#0f121a',
+        tesmo2: '#151f2b'
       },
       screens: {
         sm: "640px",

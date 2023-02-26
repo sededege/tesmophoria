@@ -35,6 +35,7 @@ const nav = () => {
     }
     setMenu(props[0])
   }
+  
   return (
     <div className="gap-4 mr-6 w-full text-white">
     <ul className="menu flex flex-col gap-4 text-right text-pike2 cursor-pointer text-[1.3rem]">

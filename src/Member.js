@@ -4,10 +4,10 @@ import { FaDiscord } from "react-icons/fa";
 
 const Member = ({ photo, name, user, discord, details, curiosity, role }) => {
   const color = (a) => {
-    if (a === "COMMUNITY LEADER") {
+    if (a === "CORE TEAM") {
       return "text-red-500";
     }
-    if (a === "DERUG LEADER") {
+    if (a === "DEVELOPER") {
       return "text-yellow-500";
     }
     if (a === "RUG ANALYST") {

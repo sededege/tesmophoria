@@ -50,10 +50,10 @@ const Headercel = ({ setNumber }) => {
       id: 2,
       name: "Roadmap",
     },
-    {
+   /*  {
       id: 5,
       name: "Raffle",
-    },
+    }, */
   ];
   const Navegador = () => {
     return (

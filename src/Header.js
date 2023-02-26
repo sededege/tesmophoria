@@ -44,10 +44,10 @@ const Header = ({ setNumber }) => {
       id: 2,
       name: "Roadmap",
     },
-    {
+    /* {
       id: 5,
       name: "Raffle",
-    },
+    }, */
   ];
 
   const scroller = (props) => {
@@ -75,7 +75,7 @@ const Header = ({ setNumber }) => {
   return (
     <nav
       className={`${
-        scroll > 10 ? "top-0  border-b-4 border-pike fixed " : "top-0 absolute "
+        scroll > 10 ? "top-0 fixed " : "top-0 absolute "
       } : w-full hidden md:flex z-[100] justify-between bg-tesmo items-center px-20 h-20 transition-all ease-in 2s`}
     >
       {/*       <img src={logo} alt="logo" className="flex w-20" />

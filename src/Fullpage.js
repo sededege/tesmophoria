@@ -40,23 +40,14 @@ const Fullpage = () => {
                   Vision
                 </h1>
                 <p className=" mt-4 text-[1.2rem]">
-                The rebirth of the Goddess has happened. From now on we will start building a project that will change the game of Solana.
-                </p>
-                <p className=" mt-4  text-[1.2rem] md:text-[1.2rem]">
-                  Thanks to all to the heroes who saved{" "}
-                  <span className="font-bold">+250,000 USD </span> from the
-                  community.
-                </p>
-                <p className=" mt-4 text-[1.2rem]">
-                  Thanks for trusting us,<br></br>
-                  <span className="font-bold">We are Thesmophoria.</span>
+                Thesmophoria was an artistic project that suffered a rug pull by its founder, causing the community to lose everything. <br></br> The community refused to let the project die. In just 48 hours, they raised 160 sol in donations to remint the project.<br></br> Now the floor price is higher than the all time high before the rug pull, with rare NFTs selling for over 30+ $SOL. <br></br>Now, the new Thesmophoria team is working hard to build the project back up stronger than ever, with a new website and roadmap for the future.<br></br> Join the Thesmophoria movement and be a part of something special.<br></br> Visit our Discord to learn more and connect with our passionate and knowledgeable <span className="font-bold">community.</span> 
                 </p>
               </div>
             </div>
             <div className=" w-full">
               <img
                 src={tesmo}
-                className=" h-full w-full object-cover object-contain p-4 md:w-3/4 md:p-0  mx-auto  rounded-lg"
+                className=" h-full w-full object-contain p-4 md:w-3/4 md:p-0  mx-auto  rounded-lg"
                 alt="nft"
               />
             </div>
@@ -155,13 +146,67 @@ const Fullpage = () => {
           <div className="w-full bg-tesmo h-[1000vh] p-4 md:p-20 md:text-center  menu">
             <h1 className="text-[3rem] text-white menu text-center md:text-left">Team</h1>
             <div className="grid lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-4 w-full">
+            <Member
+                photo="https://pbs.twimg.com/profile_images/1622283245055352833/HoiXbPP5_400x400.jpg"
+                name="Robotventures.sol"
+                user="@R0botventures"
+                discord="RobotVentures.sol#3030"
+                details="Business Analyst - Tech Nerd"
+                role="CORE TEAM"
+
+                /*                 curiosity="I love cats & I am here since Dec, 2021."
+                 */
+              />
+               <Member
+                photo="https://pbs.twimg.com/profile_images/1625013955453390848/3E5c7FPR_400x400.jpg"
+                name="Liz The Diz"
+                user="@TheLibertyLiz"
+                discord="LizTheDiz#7254"
+                details="Humorous sigma female developing awesome technologies across an array of verticals."
+                role="CORE TEAM"
+
+                /*                 curiosity="I like cats & I am here since Dec, 2021."
+                 */
+              />
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1623720028729380865/l7hpoPAg_400x400.jpg"
+                name="Involvd"
+                user="@involvdSol"
+                discord="involvd#0001"
+                details="Security Manufacturing Engineer"
+                role="CORE TEAM"
+
+                /*                 curiosity="I like cats & I am here since Dec, 2021."
+                 */
+              />
+               <Member
+                photo="https://pbs.twimg.com/profile_images/1624568312775467009/u_rdIkmW_400x400.jpg"
+                name="Dylan"
+                user="@nfa_caller"
+                discord="rkz#4276"
+                details="Solana Enthusiast"
+                curiosity="I like cats & I am here since Dec, 2021."
+                role="CORE TEAM"
+              />
+                 <Member
+                photo="https://pbs.twimg.com/profile_images/1622554354661072899/psDUFrXA_400x400.jpg"
+                name="Ryan"
+                user="@Ryan_Mirror"
+                discord="rkz#4276"
+                details="Community Manager"
+                role="CORE TEAM"
+
+                /*                 curiosity="I like cats & I am here since Dec, 2021."
+                 */
+              />
+             
               <Member
                 photo="https://pbs.twimg.com/profile_images/1611101650818682889/HKEw896L_400x400.png"
                 name="ApocalypsevSol"
                 user="@RGFREESTYLE"
                 discord="rkz#4276"
                 details="DevOps Engineer"
-                role="DEV LEADER"
+                role="DEVELOPER"
 
                 /*                 curiosity="I like cats & I am here since Dec, 2021."
                  */
@@ -172,7 +217,7 @@ const Fullpage = () => {
                 user="@crypto_flan"
                 discord="rkz#4276"
                 details="Web and App Security Analyst, Dev, Derugging."
-                role="TECH LEADER"
+                role="DEVELOPER"
 
                 /*                 curiosity="I like cats & I am here since Dec, 2021."
                  */
@@ -183,51 +228,15 @@ const Fullpage = () => {
                 user="@RGFREESTYLE"
                 discord="rkz#4276"
                 details="Fullstack React Developer"
-                role="DERUG LEADER"
+                role="DEVELOPER"
 
                 /*                 curiosity="I like cats & I am here since Dec, 2021."
                  */
               />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1622283245055352833/HoiXbPP5_400x400.jpg"
-                name="Robotventures.sol"
-                user="@R0botventures"
-                discord="RobotVentures.sol#3030"
-                details="Business Analyst - Tech Nerd"
-                role="DERUG LEADER"
-
-                /*                 curiosity="I love cats & I am here since Dec, 2021."
-                 */
-              />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1622554354661072899/psDUFrXA_400x400.jpg"
-                name="Ryan"
-                user="@Ryan_Mirror"
-                discord="rkz#4276"
-                details="Community Manager"
-                role="COMMUNITY DIRECTOR"
-
-                /*                 curiosity="I like cats & I am here since Dec, 2021."
-                 */
-              />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1570404982146351104/snVQhnBi_400x400.jpg"
-                name="Kingpaperhands"
-                user="@kingpaperhands"
-                discord="rkz#4276"
-                details="Rug radar"
-                curiosity="I like cats & I am here since Dec, 2021."
-                role="RUG ANALYST"
-              />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1624568312775467009/u_rdIkmW_400x400.jpg"
-                name="Dylan"
-                user="@nfa_caller"
-                discord="rkz#4276"
-                details="Solana Enthusiast"
-                curiosity="I like cats & I am here since Dec, 2021."
-                role="COMMUNITY LEADER"
-              />
+          
+           
+           
+             
               <Member
                 photo="https://media.discordapp.net/attachments/1072978757448638555/1075102613957247028/https___arweave.png"
                 name="Gajoo"
@@ -236,6 +245,15 @@ const Fullpage = () => {
                 details="Solana Enthusiast"
                 curiosity="I like cats & I am here since Dec, 2021."
                 role="DISCORD MANAGER"
+              />
+                 <Member
+                photo="https://pbs.twimg.com/profile_images/1570404982146351104/snVQhnBi_400x400.jpg"
+                name="Kingpaperhands"
+                user="@kingpaperhands"
+                discord="rkz#4276"
+                details="Rug radar"
+                curiosity="I like cats & I am here since Dec, 2021."
+                role="ADVISOR"
               />
               <Member
                 photo="https://pbs.twimg.com/profile_images/1618243803185299461/SihrNd0w_400x400.jpg"
