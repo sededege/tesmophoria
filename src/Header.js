@@ -40,10 +40,10 @@ const Header = ({ setNumber }) => {
       id: 3,
       name: "Team",
     },
-    {
+    /* {
       id: 2,
       name: "Roadmap",
-    },
+    }, */
     /* {
       id: 5,
       name: "Raffle",
@@ -63,10 +63,10 @@ const Header = ({ setNumber }) => {
     if (props[0] === "Team") {
       navigate("/", { state: 4.1 });
     }
-    if (props[0] === "Roadmap") {
+   /*  if (props[0] === "Roadmap") {
     navigate("/roadmap", { state: 0 });
 
-    }
+    } */
 
   
     setMenu(props[0]);

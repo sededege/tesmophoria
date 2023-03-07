@@ -158,27 +158,17 @@ const Fullpage = () => {
                  */
               />
                <Member
-                photo="https://pbs.twimg.com/profile_images/1625013955453390848/3E5c7FPR_400x400.jpg"
-                name="Liz The Diz"
+                photo="https://pbs.twimg.com/profile_images/1626663414129983488/AO7EdOjz_400x400.jpg"
+                name="FlowStateJ"
                 user="@TheLibertyLiz"
-                discord="LizTheDiz#7254"
-                details="Humorous sigma female developing awesome technologies across an array of verticals."
+                discord="@CrypticJonny"
+                details="Web3 Business Owner / Consultant of 6 Years."
                 role="CORE TEAM"
 
                 /*                 curiosity="I like cats & I am here since Dec, 2021."
                  */
               />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1623720028729380865/l7hpoPAg_400x400.jpg"
-                name="Involvd"
-                user="@involvdSol"
-                discord="involvd#0001"
-                details="Security Manufacturing Engineer"
-                role="CORE TEAM"
-
-                /*                 curiosity="I like cats & I am here since Dec, 2021."
-                 */
-              />
+              
                <Member
                 photo="https://pbs.twimg.com/profile_images/1624568312775467009/u_rdIkmW_400x400.jpg"
                 name="Dylan"
@@ -188,40 +178,7 @@ const Fullpage = () => {
                 curiosity="I like cats & I am here since Dec, 2021."
                 role="CORE TEAM"
               />
-                 <Member
-                photo="https://pbs.twimg.com/profile_images/1622554354661072899/psDUFrXA_400x400.jpg"
-                name="Ryan"
-                user="@Ryan_Mirror"
-                discord="rkz#4276"
-                details="Community Manager"
-                role="CORE TEAM"
-
-                /*                 curiosity="I like cats & I am here since Dec, 2021."
-                 */
-              />
-             
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1611101650818682889/HKEw896L_400x400.png"
-                name="ApocalypsevSol"
-                user="@RGFREESTYLE"
-                discord="rkz#4276"
-                details="DevOps Engineer"
-                role="DEVELOPER"
-
-                /*                 curiosity="I like cats & I am here since Dec, 2021."
-                 */
-              />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1603352592205189120/hnDr5lUH_400x400.jpg"
-                name="Crypto Flan"
-                user="@crypto_flan"
-                discord="rkz#4276"
-                details="Web and App Security Analyst, Dev, Derugging."
-                role="DEVELOPER"
-
-                /*                 curiosity="I like cats & I am here since Dec, 2021."
-                 */
-              />
+              
               <Member
                 photo="https://pbs.twimg.com/profile_images/1622467149942910976/cMeW5lXm_400x400.jpg"
                 name="rkz"
@@ -233,12 +190,35 @@ const Fullpage = () => {
                 /*                 curiosity="I like cats & I am here since Dec, 2021."
                  */
               />
+           
+              <Member
+                photo="https://pbs.twimg.com/profile_images/1603352592205189120/hnDr5lUH_400x400.jpg"
+                name="Crypto Flan"
+                user="@crypto_flan"
+                discord="rkz#4276"
+                details="Web and App Security Analyst, Dev, Derugging."
+                role="DEVELOPER"
+
+                /*                 curiosity="I like cats & I am here since Dec, 2021."
+                 */
+              />
+              
           
            
-           
+          <Member
+                photo="https://pbs.twimg.com/profile_images/1611101650818682889/HKEw896L_400x400.png"
+                name="ApocalypsevSol"
+                user="@RGFREESTYLE"
+                discord="rkz#4276"
+                details="DevOps Engineer"
+                role="DEVELOPER"
+
+                /*                 curiosity="I like cats & I am here since Dec, 2021."
+                 */
+              />
              
               <Member
-                photo="https://media.discordapp.net/attachments/1072978757448638555/1075102613957247028/https___arweave.png"
+                photo="https://img-cdn.magiceden.dev/rs:fill:640:640:0:0/plain/https%3A%2F%2Farweave.net%2FhNSXmqma4Wj0jG2XxRtSmn_HOLdmiLrg4EHQ27RaBRk%3Fext%3Dpng"
                 name="Gajoo"
                 user="@Gajoo_sol"
                 discord="rkz#4276"
@@ -255,24 +235,7 @@ const Fullpage = () => {
                 curiosity="I like cats & I am here since Dec, 2021."
                 role="ADVISOR"
               />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1618243803185299461/SihrNd0w_400x400.jpg"
-                name="Solar Dex"
-                user="@solar_dex"
-                discord="rkz#4276"
-                details="Co-Founder and CEO of Solar Dex"
-                curiosity="I like cats & I am here since Dec, 2021."
-                role="ADVISOR"
-              />
-              <Member
-                photo="https://pbs.twimg.com/profile_images/1582951550028242946/bjWDnLc7_400x400.jpg"
-                name="Dak Daze"
-                user="@dak_daze"
-                discord="rkz#4276"
-                details="Lead With an Open Mind and an Open Heart"
-                curiosity="I like cats & I am here since Dec, 2021."
-                role="ADVISOR"
-              />
+              
             </div>
           </div>
         </ParallaxLayer>
