@@ -40,6 +40,10 @@ const Header = ({ setNumber }) => {
       id: 3,
       name: "Team",
     },
+    {
+      id: 4,
+      name: "Earn",
+    },
     /* {
       id: 2,
       name: "Roadmap",
@@ -62,6 +66,10 @@ const Header = ({ setNumber }) => {
     }
     if (props[0] === "Team") {
       navigate("/", { state: 4.1 });
+    }
+    if (props[0] === "Earn") {
+   
+      window.location.href = "https://earn.thesmophoria.io/";
     }
    /*  if (props[0] === "Roadmap") {
     navigate("/roadmap", { state: 0 });

@@ -50,6 +50,11 @@ const Headercel = ({ setNumber }) => {
       id: 2,
       name: "Roadmap",
     },
+    {
+      id: 8,
+      name: "Earn",
+    },
+
    /*  {
       id: 5,
       name: "Raffle",
@@ -105,6 +110,10 @@ const Headercel = ({ setNumber }) => {
     }
     if (props[0] === "Roadmap") {
       navigate("/", { state: 10 });
+    }
+    if (props[0] === "Earn") {
+   
+      window.location.href = "https://earn.thesmophoria.io/";
     }
 
   
