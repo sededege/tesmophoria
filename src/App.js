@@ -8,7 +8,7 @@ import Raffle from "./Raffle";
 import Headercel from "./Headercel";
 import Roadmap from "./Roadmap";
 import Vaults from "./Vaults";
-
+import Privacy from './Privacy'
 function App() {
   return (
     <Router>
@@ -19,6 +19,7 @@ function App() {
         <Route path="/raffle" element={<Raffle/>} ></Route>
         <Route path="/roadmap" element={<Roadmap/>} ></Route>
         <Route path="/vault" element={<Vaults/>} ></Route>
+        <Route path="/privacy" element={<Privacy/>} ></Route>
       </Routes>
       <Footer/>
     </Router>

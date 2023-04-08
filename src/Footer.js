@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiOutlineTwitter } from "react-icons/ai";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaSteam } from "react-icons/fa";
 import logo from "./assets/logo.jpg";
 import me from "./assets/me.png";
 
@@ -20,6 +20,9 @@ const Footer = () => {
         </a>
         <a href="https://discord.com/invite/tesmophoria">
           <FaDiscord className="text-[30px] text-white hover:text-purple-500" />
+        </a>
+        <a href="https://store.steampowered.com/app/2362520/Thesmophoria/?beta=1">
+          <FaSteam className="text-[24px] text-white hover:text-purple-500" />
         </a>
       </div>
     </div>
