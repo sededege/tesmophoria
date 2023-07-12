@@ -5,7 +5,7 @@ import logo from "./assets/logo.jpg";
 import me from "./assets/me.png";
 import { useNavigate } from "react-router-dom";
 
-const Header = ({ setNumber }) => {
+const Header = ({handleClick, handleClickCatalogo,  handleClickContacto }) => {
   const [menu, setMenu] = React.useState("Vision");
   const [scroll, setY] = React.useState(window.scrollY);
   const navigate = useNavigate();
@@ -42,7 +42,11 @@ const Header = ({ setNumber }) => {
     },
     {
       id: 4,
-      name: "Earn",
+      name: "Vault",
+    },
+    {
+      id: 5,
+      name: "Ordinals",
     },
     /* {
       id: 2,
@@ -54,37 +58,40 @@ const Header = ({ setNumber }) => {
     }, */
   ];
 
-  const scroller = (props) => {
-    if (props[0] === "Vision") {
-      navigate("/", { state: 1 });
-    }
-    if (props[0] === "Raffle") {
-      navigate("/raffle", { state: 0 });
-    }
-    if (props[0] === "Our History") {
-      navigate("/", { state: 2 });
-    }
-    if (props[0] === "Team") {
-      navigate("/", { state: 4.1 });
-    }
-    if (props[0] === "Earn") {
-   
-      window.location.href = "https://earn.thesmophoria.io/";
-    }
-   /*  if (props[0] === "Roadmap") {
-    navigate("/roadmap", { state: 0 });
-
-    } */
-
   
-    setMenu(props[0]);
+
+  const navegar = (a) => {
+   setMenu(a)
+    if (a === "Home") {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })
+    } 
+    if (a === 'Vision') {
+      handleClickCatalogo()
+        } 
+    if (a === 'Our History') {
+      handleClick()
+    } 
+    if (a === 'Team') {
+      handleClickContacto() 
+       } 
+    if (a === 'Vault') {
+      window.location.href = "https://earn.thesmophoria.io/";
+
+       } 
+    if (a === 'Ordinals') {
+      window.location.href = "https://ordinals.thesmophoria.io/";
+
+       } 
   };
 
   return (
     <nav
       className={`${
         scroll > 10 ? "top-0 fixed " : "top-0 absolute "
-      } : w-full hidden md:flex z-[100] justify-between bg-tesmo items-center px-20 h-20 transition-all ease-in 2s`}
+      } : w-full hidden md:flex z-[100] justify-between bg-tesmo bg-opacity-85 items-center px-20 h-20 transition-all ease-in 2s`}
     >
       {/*       <img src={logo} alt="logo" className="flex w-20" />
        */}{" "}
@@ -104,9 +111,15 @@ const Header = ({ setNumber }) => {
           {menunav.map((a, index) => (
             <li
               key={index}
-              onClick={() => scroller([a.name, index])}
+              onClick={() => navegar(a.name)}
               className={`${
                 menu === a.name ? "text-yellow-400" : "text-white"
+              } 
+              ${
+                a.name === 'Ordinals' && 'text-white px-2 rounded-lg bg-orange-500'
+              }
+              ${
+                a.name === 'Vault' && 'text-white px-2 rounded-lg bg-purple-500'
               } `}
             >
               {a.name}

@@ -9,7 +9,7 @@ import logo from "./assets/logo.jpg";
 import me from "./assets/me.png";
 import { useNavigate } from "react-router-dom";
 
-const Headercel = ({ setNumber }) => {
+const Headercel = ({handleClick, handleClickCatalogo,  handleClickContacto }) => {
   const [menu, setMenu] = React.useState("Vision");
   const [scroll, setY] = React.useState(window.scrollY);
   const [open, setOpen] = React.useState(false);
@@ -33,6 +33,7 @@ const Headercel = ({ setNumber }) => {
     };
   }, [handleNavigation]);
 
+  
   const menunav = [
     {
       id: 0,
@@ -47,19 +48,52 @@ const Headercel = ({ setNumber }) => {
       name: "Team",
     },
     {
-      id: 2,
-      name: "Roadmap",
+      id: 4,
+      name: "Vault",
     },
     {
-      id: 8,
-      name: "Earn",
+      id: 5,
+      name: "Ordinals",
     },
-
-   /*  {
+    /* {
+      id: 2,
+      name: "Roadmap",
+    }, */
+    /* {
       id: 5,
       name: "Raffle",
     }, */
   ];
+
+  
+
+  const navegar = (a) => {
+   setMenu(a)
+   setOpen(false)
+    if (a === "Home") {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })
+    } 
+    if (a === 'Vision') {
+      handleClickCatalogo()
+        } 
+    if (a === 'Our History') {
+      handleClick()
+    } 
+    if (a === 'Team') {
+      handleClickContacto() 
+       } 
+    if (a === 'Vault') {
+      window.location.href = "https://earn.thesmophoria.io/";
+
+       } 
+    if (a === 'Ordinals') {
+      window.location.href = "https://ordinals.thesmophoria.io/";
+
+       } 
+  };
   const Navegador = () => {
     return (
       <div className="h-[100vh] fixed top-0 z-[100] w-full bg-tesmo items-center flex  justify-center">
@@ -69,11 +103,17 @@ const Headercel = ({ setNumber }) => {
         />
         <ul className="menu flex flex-col gap-4 text-center text-pike2 cursor-pointer text-[1.8rem]">
           {menunav.map((a, index) => (
-            <li
+              <li
               key={index}
-              onClick={() => scroller([a.name, index])}
+              onClick={() => navegar(a.name)}
               className={`${
                 menu === a.name ? "text-yellow-400" : "text-white"
+              } 
+              ${
+                a.name === 'Ordinals' && 'text-white px-2 rounded-lg bg-orange-500'
+              }
+              ${
+                a.name === 'Vault' && 'text-white px-2 rounded-lg bg-purple-500'
               } `}
             >
               {a.name}

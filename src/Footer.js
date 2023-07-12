@@ -6,7 +6,7 @@ import me from "./assets/me.png";
 
 const Footer = () => {
   return (
-    <div className='w-full text-white bg-tesmo text-center h-[30px] fixed bottom-0 justify-between hidden md:flex py-2 md:py-8 md:items-center
+    <div className='w-full text-white bg-tesmo text-center h-[30px]  justify-between hidden md:flex py-2 md:py-8 md:items-center
      px-20'>
         <p>
         All rights reserved © Thesmophoria 2023.

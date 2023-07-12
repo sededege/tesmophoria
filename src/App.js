@@ -12,9 +12,7 @@ import Privacy from './Privacy'
 function App() {
   return (
     <Router>
-      <Header/>
-      <Headercel/>
-      <Routes>
+        <Routes>
         <Route exact path="/" element={<Fullpage />}></Route>
         <Route path="/raffle" element={<Raffle/>} ></Route>
         <Route path="/roadmap" element={<Roadmap/>} ></Route>

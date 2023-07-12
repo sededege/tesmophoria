@@ -29,7 +29,7 @@ const Member = ({ photo, name, user, discord, details, curiosity, role }) => {
   return (
     <div className=" bg-[#151f2b] w-[300px] mx-auto text-white text-[1.2rem] p-6 font text-center rounded-lg relative mt-20">
       <img
-        className="rounded-full w-[120px] mx-auto absolute -top-[60px] left-[calc(150px-60px)]"
+        className="rounded-lg w-[100px] h-[120px] object-cover mx-auto absolute -top-[60px] left-[calc(150px-50px)]"
         src={photo}
       />
       <div className="mt-16">
